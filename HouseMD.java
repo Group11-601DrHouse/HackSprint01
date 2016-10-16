@@ -14,6 +14,7 @@ public class HouseMD {
 		String illness = "";
 		String symptom = "";
 		String result = "";
+		System.out.println("Tell me your symptoms & analysis(In the following sequence: 'Symptom, analysis')");
 		String input = console.nextLine();
 		input = input.toLowerCase();
 		String [] splArr = input.split(",");
@@ -28,6 +29,13 @@ public class HouseMD {
 				}
 			}
 			while  ((sympt.hasNextLine())&&(analys.hasNextLine()));
-		System.out.println(result);
+		
+		
+		if (result.equals("")){ 
+			System.out.println("Input is incorrect"); 
+		} 
+		else { 
+			System.out.println(result); 
+		}
 	}	
 }
